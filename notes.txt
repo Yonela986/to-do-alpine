@@ -1,0 +1,14 @@
+For our App :
+Should be able to add a todo*
+Should see a list*
+delete*
+mark
+clear the list
+desplay number of todo and completed to do
+
+** setup some conditions for the user input when edding input in the list(
+    avoid entering empty array or empty space
+).
+
+x-data -so we set up userInput for data meaning user will be able to add text on our text holder
+x-text - if we set this to userInput, means whenever I type something on text area it will also show below as a textt being edited.

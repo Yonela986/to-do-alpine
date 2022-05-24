@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <style>
+            .delete:hover{
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!--x-data declare a new Alpine component and its data for a block of html -->
+        <div x-data="{todos: [], userInput: ''}">
+            <!--modifiers can modify the behavior of directives-->
+            <!--default- prevent the default behaviour-->
+            <form x-on:submit.prevent>
+                <!--x-model synchronize a piece of data with an input element-->
+                <input x-model= "userInput" placeholder="Enter Item" type="text">
+                <!--add click event using x-on:-->
+                <!--add our object and what we want our click to actually do-->
+                <!-- by adding userInput we reinitializing user input-->
+            <button x-on:click="if(userInput.trim().length) todos.push({name: userInput, completed: false}); userInput = ''">Add</button>
+            </form>
+            <!---x-text sets the text content of an element based on a JS expression
+            <p x-text="userInput"></p> --->
+            <!--x-for is used to iterate over a list-->
+            <template x-for="todo in todos">
+                <div>
+                    <input type="checkbox">
+                    <span x-text="todo.name"></span>
+                    <!--the filter() method creates a new array with all elements that 
+                        pass the test implemented by the provided function-->
+                        <!--currTodo - current to do-->
+                    <button x-on:click="todo = todos.filter((currTodo) = currTodo != rodo)" class="delete">Delete</button>
+                </div>
+            </template>
+        </div>
+    </body>
+</html>
