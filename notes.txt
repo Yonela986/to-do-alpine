@@ -1,14 +1,37 @@
 For our App :
 Should be able to add a todo*
 Should see a list*
-delete*
-mark
-clear the list
-desplay number of todo and completed to do
+delete*?
+mark*
+clear the list *
+desplay number of todo and completed to do *
+
+Add ability to edit todos
+add ability to filter todos
+
 
 ** setup some conditions for the user input when edding input in the list(
     avoid entering empty array or empty space
 ).
-
+x-show - let us show and hide DOM elements
 x-data -so we set up userInput for data meaning user will be able to add text on our text holder
 x-text - if we set this to userInput, means whenever I type something on text area it will also show below as a textt being edited.
+
+        x-data declare a new Alpine component and its data for a block of html 
+        - modifiers can modify the behavior of directives
+        - default- prevent the default behaviour
+        - x-model synchronize a piece of data with an input element
+
+         <!--add click event using x-on:-->
+        <!--add our object and what we want our click to actually do-->
+        <!-- by adding userInput we reinitializing user input
+
+         <!---x-text sets the text content of an element based on a JS expression
+            <p x-text="userInput"></p> --->
+            <!--x-for is used to iterate over a list-->
+        <!-- x-bind sets HTML attributes based on the result of JS expressions-->
+        <!--the filter() method creates a new array with all elements that pass the test implemented by the provided function-->
+        <!--currTodo - current to do-->
+         <!--Only want to show this button when we have todo on our list, for that
+            will use x-show -->
+
